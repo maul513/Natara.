@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NATARA | Tradisi, Nilai, Aksi</title>
+
+<style>
+
+:root {
+
+  --green: #164a32;
+
+  --light: #f5f5ec;
+
+  --mint: #dfedd9;
+
+  --leaf: #55966a;
+
+  --text: #263c2e;
+
+}
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  background: var(--light);
+
+  color: var(--text);
+
+  line-height: 1.6;
+
+}
+
+header {
+
+  background: #fff;
+
+  padding: 16px 6%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+
+  box-shadow: 0 2px 10px #00000010;
+
+}
+
+.logo {
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  color: var(--green);
+
+  letter-spacing: 2px;
+
+}
+
+.logo small {
+
+  display: block;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+}
+
+nav {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+}
+
+nav button {
+
+  border: none;
+
+  padding: 9px 14px;
+
+  border-radius: 25px;
+
+  background: transparent;
+
+  color: var(--green);
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+nav button:hover,
+
+nav button.active {
+
+  background: var(--green);
+
+  color: white;
+
+}
+
+main {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 25px 20px;
+
+}
+
+.hero {
+
+  min-height: 420px;
+
+  border-radius: 25px;
+
+  padding: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: white;
+
+  background:
+
+    linear-gradient(90deg, #092c20ed, #092c2060),
+
+    url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=80")
+
+    center/cover;
+
+}
+
+.hero-content {
+
+  max-width: 580px;
+
+}
+
+.hero small {
+
+  color: #c8e8c7;
+
+  letter-spacing: 2px;
+
+  font-weight: bold;
+
+}
+
+.hero h1 {
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(38px, 7vw, 68px);
+
+  line-height: 1.1;
+
+  margin: 18px 0;
+
+}
+
+.hero p {
+
+  margin-bottom: 22px;
+
+}
+
+.btn {
+
+  border: none;
+
+  border-radius: 25px;
+
+  padding: 12px 20px;
+
+  background: var(--leaf);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+
+.btn:hover {
+
+  opacity: .85;
+
+}
+
+.section {
+
+  display: none;
+
+  padding: 25px 0;
+
+}
+
+.section.active {
+
+  display: block;
+
+}
+
+.heading {
+
+  margin: 20px 0;
+
+}
+
+.heading span {
+
+  color: var(--leaf);
+
+  font-weight: bold;
+
+}
+
+.heading h2 {
+
+  color: var(--green);
+
+  font-size: clamp(27px, 4vw, 38px);
+
+  margin: 5px 0;
+
+}
+
+.heading p {
+
+  color: #68766b;
+
+}
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+}
+
+.card,
+
+.panel {
+
+  background: white;
+
+  border: 1px solid #e2e7dc;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  margin-bottom: 15px;
+
+}
+
+.card img {
+
+  width: 100%;
+
+  height: 190px;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+.card-body,
+
+.panel {
+
+  padding: 20px;
+
+}
+
+.card h3,
+
+.panel h3 {
+
+  color: var(--green);
+
+  margin-bottom: 10px;
+
+}
+
+.card p,
+
+.panel p {
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+
+}
+
+.tag {
+
+  display: inline-block;
+
+  background: var(--mint);
+
+  color: var(--green);
+
+  border-radius: 20px;
+
+  padding: 5px 10px;
+
+  font-size: 11px;
+
+  margin-bottom: 10px;
+
+}
+
+.columns {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+}
+
+.value {
+
+  padding: 14px;
+
+  margin: 10px 0;
+
+  border-radius: 14px;
+
+  background: #f5f7ef;
+
+}
+
+.value h3 {
+
+  color: var(--green);
+
+}
+
+.tabs {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 15px 0;
+
+}
+
+.tabs button {
+
+  border: 1px solid #cdddc9;
+
+  background: white;
+
+  color: var(--green);
+
+  border-radius: 20px;
+
+  padding: 9px 15px;
+
+  cursor: pointer;
+
+}
+
+.tabs button.active {
+
+  background: var(--green);
+
+  color: white;
+
+}
+
+.field {
+
+  display: block;
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin: 10px 0;
+
+  border: 1px solid #d5dfd1;
+
+  border-radius: 12px;
+
+  background: #fff;
+
+  font: inherit;
+
+}
+
+.option {
+
+  display: block;
+
+  padding: 12px;
+
+  margin: 8px 0;
+
+  border: 1px solid #dce5d8;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+}
+
+.option:has(input:checked) {
+
+  background: var(--mint);
+
+}
+
+.progress {
+
+  height: 9px;
+
+  background: #e1e8dc;
+
+  border-radius: 20px;
+
+  margin: 12px 0;
+
+  overflow: hidden;
+
+}
+
+.progress div {
+
+  height: 100%;
+
+  width: 0;
+
+  background: var(--leaf);
+
+  transition: width .2s;
+
+}
+
+.task {
+
+  display: block;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #e5e9e1;
+
+}
+
+.task input {
+
+  margin-right: 8px;
+
+  accent-color: var(--green);
+
+}
+
+#feed {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 15px;
+
+}
+
+.post {
+
+  background: white;
+
+  border: 1px solid #e0e7dc;
+
+  border-radius: 15px;
+
+  padding: 15px;
+
+  overflow-wrap: anywhere;
+
+}
+
+.post img {
+
+  width: 100%;
+
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+
+}
+
+.flow {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: var(--mint);
+
+  text-align: center;
+
+}
+
+.flow h3 {
+
+  color: var(--green);
+
+}
+
+footer {
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: #6a786b;
+
+}
+
+footer strong {
+
+  color: var(--green);
+
+  letter-spacing: 3px;
+
+}
+
+@media (max-width: 700px) {
+
+  header {
+
+    padding: 14px;
+
+  }
+
+  nav {
+
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+  }
+
+  nav button {
+
+    white-space: nowrap;
+
+  }
+
+  main {
+
+    padding: 15px;
+
+  }
+
+  .hero {
+
+    padding: 28px;
+
+    min-height: 380px;
+
+  }
+
+  .grid,
+
+  .columns,
+
+  #feed {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .flow {
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 15px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+
+    ❧ NATARA
+
+    <small>TRADISI · NILAI · AKSI</small>
+
+  </div>
+
+  <nav>
+
+    <button class="active" onclick="showPage('beranda',this)">Beranda</button>
+
+    <button onclick="showPage('tradisi',this)">Tradisi</button>
+
+    <button onclick="showPage('nilai',this)">Nilai</button>
+
+    <button onclick="showPage('refleksi',this)">Refleksi</button>
+
+    <button onclick="showPage('aksi',this)">Aksi</button>
+
+  </nav>
+
+</header>
+
+<main>
+
+<!-- BERANDA -->
+
+<section id="beranda" class="section active">
+
+  <div class="hero">
+
+    <div class="hero-content">
+
+      <small>MENGENAL BUDAYA · MERAWAT BUMI</small>
+
+      <h1>Tradisi hari ini, lingkungan esok.</h1>
+
+      <p>
+
+        Jelajahi tradisi Saparan Bekakak, pahami nilai
+
+        yang terkandung di dalamnya, dan temukan aksi
+
+        sederhana untuk menjaga alam.
+
+      </p>
+
+      <button class="btn" onclick="goPage('tradisi')">
+
+        Mulai Jelajah →
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="heading">
+
+    <span>SELAMAT DATANG DI NATARA</span>
+
+    <h2>Dari tradisi, tumbuh kepedulian.</h2>
+
+    <p>
+
+      Ruang belajar interaktif yang menghubungkan
+
+      kearifan lokal, ekoteologi Islam, refleksi
+
+      lingkungan, dan tindakan nyata.
+
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+
+      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80" alt="Hutan">
+
+      <div class="card-body">
+
+        <span class="tag">01 · KENALI</span>
+
+        <h3>Jelajah Tradisi</h3>
+
+        <p>Kenali sejarah dan prosesi Saparan Bekakak.</p>
+
+        <button class="btn" onclick="goPage('tradisi')">Jelajahi</button>
+
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80" alt="Daun hijau">
+
+      <div class="card-body">
+
+        <span class="tag">02 · PAHAMI</span>
+
+        <h3>Makna dan Nilai</h3>
+
+        <p>Pahami nilai budaya dan kepedulian ekologis.</p>
+
+        <button class="btn" onclick="goPage('nilai')">Pelajari</button>
+
+      </div>
+
+    </article>
+
+    <article class="card">
+
+      <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80" alt="Pepohonan">
+
+      <div class="card-body">
+
+        <span class="tag">03 · PRAKTIKKAN</span>
+
+        <h3>Aksi Nyata</h3>
+
+        <p>Mulai kebiasaan sederhana untuk menjaga bumi.</p>
+
+        <button class="btn" onclick="goPage('aksi')">Mulai Aksi</button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="flow">
+
+    <div><h3>① Kenali</h3><p>Sejarah tradisi</p></div>
+
+    <div><h3>② Pahami</h3><p>Nilai dan makna</p></div>
+
+    <div><h3>③ Refleksikan</h3><p>Uji pemahaman</p></div>
+
+    <div><h3>④ Praktikkan</h3><p>Aksi sehari-hari</p></div>
+
+  </div>
+
+</section>
+
+<!-- TRADISI -->
+
+<section id="tradisi" class="section">
+
+  <div class="heading">
+
+    <span>01 · KENALI</span>
+
+    <h2>Jelajah Tradisi</h2>
+
+    <p>Mengenal Saparan Bekakak di Ambarketawang, Gamping, Sleman.</p>
+
+  </div>
+
+  <div class="tabs">
+
+    <button class="active" onclick="tradisiTab('sejarah',this)">Sejarah</button>
+
+    <button onclick="tradisiTab('prosesi',this)">Prosesi</button>
+
+    <button onclick="tradisiTab('makna',this)">Makna</button>
+
+  </div>
+
+  <div id="sejarah" class="panel tradisi-content">
+
+    <h3>Apa itu Saparan Bekakak?</h3>
+
+    <p>
+
+      Saparan Bekakak merupakan tradisi tahunan masyarakat
+
+      Ambarketawang, Gamping, Sleman, yang berkaitan dengan
+
+      kisah Ki dan Nyai Wirasuta dan diwariskan antargenerasi.
+
+    </p>
+
+    <p>
+
+      Tradisi ini menjadi bagian dari identitas budaya
+
+      masyarakat setempat dan dilaksanakan pada bulan Sapar
+
+      dalam penanggalan Jawa.
+
+    </p>
+
+  </div>
+
+  <div id="prosesi" class="panel tradisi-content" hidden>
+
+    <h3>Gambaran Prosesi</h3>
+
+    <div class="value"><h3>01. Persiapan</h3><p>Warga menyiapkan perlengkapan tradisi.</p></div>
+
+    <div class="value"><h3>02. Kirab</h3><p>Arak-arakan menjadi bagian dari rangkaian acara.</p></div>
+
+    <div class="value"><h3>03. Prosesi inti</h3><p>Prosesi dilakukan sesuai tata cara tradisi.</p></div>
+
+    <div class="value"><h3>04. Penutup</h3><p>Kegiatan diakhiri sesuai susunan acara.</p></div>
+
+  </div>
+
+  <div id="makna" class="panel tradisi-content" hidden>
+
+    <h3>Melestarikan Warisan Budaya</h3>
+
+    <p>
+
+      Tradisi dapat menjadi ruang untuk memahami sejarah,
+
+      identitas, kebersamaan, dan hubungan masyarakat
+
+      dengan lingkungan tempat mereka hidup.
+
+    </p>
+
+    <p>
+
+      Untuk penelitian, lengkapi informasi dengan wawancara
+
+      masyarakat atau panitia dan sumber resmi kebudayaan.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- NILAI -->
+
+<section id="nilai" class="section">
+
+  <div class="heading">
+
+    <span>02 · PAHAMI</span>
+
+    <h2>Makna dan Nilai</h2>
+
+    <p>Menghubungkan nilai budaya dengan ekoteologi Islam.</p>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Tradisi yang mengajarkan kita menjaga alam</h3>
+
+    <p>
+
+      Ekoteologi Islam membahas hubungan antara keyakinan,
+
+      tanggung jawab manusia, dan lingkungan. Nilai budaya
+
+      dapat menjadi pintu untuk membangun kepedulian ekologis.
+
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card card-body">
+
+      <h3>🌱 Rasa Syukur</h3>
+
+      <p>Menghargai nikmat kehidupan dan alam.</p>
+
+    </div>
+
+    <div class="card card-body">
+
+      <h3>🤝 Kebersamaan</h3>
+
+      <p>Membangun gotong royong untuk merawat lingkungan.</p>
+
+    </div>
+
+    <div class="card card-body">
+
+      <h3>🍃 Tanggung Jawab</h3>
+
+      <p>Manusia sebagai khalifah fil ard memiliki amanah menjaga bumi.</p>
+
+    </div>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Belajar dari Al-Qur'an</h3>
+
+    <p>Pelajari pesan tentang larangan membuat kerusakan di bumi.</p>
+
+    <a href="https://quran.com/7/56" target="_blank">
+
+      Baca Surah Al-A'raf ayat 56 →
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- REFLEKSI -->
+
+<section id="refleksi" class="section">
+
+  <div class="heading">
+
+    <span>03 · REFLEKSIKAN</span>
+
+    <h2>Refleksi Lingkungan</h2>
+
+    <p>Uji pemahaman dan pikirkan tindakan yang bisa kamu lakukan.</p>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Kuis Lingkungan</h3>
+
+    <p id="question"></p>
+
+    <div id="options"></div>
+
+    <p id="feedback" aria-live="polite"></p>
+
+    <button id="checkBtn" class="btn" onclick="checkAnswer()">
+
+      Periksa Jawaban
+
+    </button>
+
+    <button id="nextBtn" class="btn" onclick="nextQuestion()" hidden>
+
+      Berikutnya →
+
+    </button>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Pertanyaan Reflektif</h3>
+
+    <p>
+
+      Apa satu kebiasaan yang bisa kamu ubah agar lebih
+
+      peduli terhadap lingkungan?
+
+    </p>
+
+    <textarea id="reflection" class="field" rows="4"
+
+      placeholder="Saya bisa mulai dengan..."></textarea>
+
+    <button class="btn" onclick="saveReflection()">Simpan Jawaban</button>
+
+    <p id="reflectionResult"></p>
+
+  </div>
+
+</section>
+
+<!-- AKSI -->
+
+<section id="aksi" class="section">
+
+  <div class="heading">
+
+    <span>04 · PRAKTIKKAN</span>
+
+    <h2>Aksi Nyata</h2>
+
+    <p>Langkah kecil, dampak besar bagi lingkungan.</p>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Tantangan 7 Hari</h3>
+
+    <p>Centang kegiatan yang sudah kamu lakukan.</p>
+
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <p id="progressText">0 dari 7 kegiatan selesai</p>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Membawa tumbler sendiri</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Memilah sampah</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Menghemat air</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Menghemat listrik</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Merawat tanaman</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Menjaga kebersihan lingkungan</label>
+
+    <label class="task"><input type="checkbox" class="taskCheck"> Mengajak teman melakukan aksi baik</label>
+
+  </div>
+
+  <div class="panel">
+
+    <h3>Catatan Kegiatan</h3>
+
+    <input id="activityName" class="field" placeholder="Nama kegiatan">
+
+    <textarea id="activityStory" class="field" rows="4"
+
+      placeholder="Ceritakan kegiatanmu..."></textarea>
+
+    <label for="activityPhoto">Foto kegiatan (opsional)</label>
+
+    <input id="activityPhoto" class="field" type="file" accept="image/*">
+
+    <button class="btn" onclick="publishActivity()">Terbitkan Catatan</button>
+
+    <p id="publishResult"></p>
+
+  </div>
+
+  <div class="heading">
+
+    <h2>Catatan Kegiatan</h2>
+
+    <p>Dokumentasi aksi yang kamu tambahkan.</p>
+
+  </div>
+
+  <div id="feed"></div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <strong>NATARA</strong>
+
+  <p>Tradisi · Nilai · Aksi</p>
+
+  <small>Belajar dari kearifan lokal, bergerak untuk bumi.</small>
+
+</footer>
+
+<script>
+
+function showPage(id, button) {
+
+  document.querySelectorAll('.section').forEach(section => {
+
+    section.classList.remove('active');
+
+  });
+
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('nav button').forEach(btn => {
+
+    btn.classList.remove('active');
+
+  });
+
+  if (button) button.classList.add('active');
+
+  else {
+
+    document.querySelectorAll('nav button').forEach(btn => {
+
+      if (btn.getAttribute('onclick').includes(id)) {
+
+        btn.classList.add('active');
+
+      }
+
+    });
+
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+}
+
+function goPage(id) {
+
+  showPage(id);
+
+}
+
+function tradisiTab(id, button) {
+
+  document.querySelectorAll('.tradisi-content').forEach(content => {
+
+    content.hidden = true;
+
+  });
+
+  document.getElementById(id).hidden = false;
+
+  document.querySelectorAll('.tabs button').forEach(btn => {
+
+    btn.classList.remove('active');
+
+  });
+
+  button.classList.add('active');
+
+}
+
+const questions = [
+
+  {
+
+    q: 'Apa nilai yang berkaitan dengan kepedulian lingkungan?',
+
+    options: [
+
+      'Tanggung jawab menjaga alam',
+
+      'Menggunakan sumber daya tanpa batas',
+
+      'Mengabaikan lingkungan'
+
+    ],
+
+    answer: 0,
+
+    explanation: 'Manusia memiliki tanggung jawab untuk merawat bumi.'
+
+  },
+
+  {
+
+    q: 'Apa manfaat gotong royong dalam aksi lingkungan?',
+
+    options: [
+
+      'Menambah pekerjaan satu orang',
+
+      'Membangun kerja sama',
+
+      'Menghindari tanggung jawab'
+
+    ],
+
+    answer: 1,
+
+    explanation: 'Gotong royong membantu kegiatan lingkungan dilakukan bersama.'
+
+  },
+
+  {
+
+    q: 'Manakah tindakan yang lebih ramah lingkungan?',
+
+    options: [
+
+      'Membuang sampah ke sungai',
+
+      'Membiarkan keran terbuka',
+
+      'Mengurangi plastik sekali pakai'
+
+    ],
+
+    answer: 2,
+
+    explanation: 'Mengurangi plastik sekali pakai membantu mengurangi sampah.'
+
+  }
+
+];
+
+let questionIndex = 0;
+
+let score = 0;
+
+let answered = false;
+
+function renderQuestion() {
+
+  const question = questions[questionIndex];
+
+  document.getElementById('question').textContent =
+
+    `Pertanyaan ${questionIndex + 1}/${questions.length}: ${question.q}`;
+
+  document.getElementById('options').innerHTML =
+
+    question.options.map((option, index) => `
+
+      <label class="option">
+
+        <input type="radio" name="answer" value="${index}">
+
+        ${String.fromCharCode(65 + index)}. ${option}
+
+      </label>
+
+    `).join('');
+
+  document.getElementById('feedback').textContent = '';
+
+  document.getElementById('checkBtn').hidden = false;
+
+  document.getElementById('nextBtn').hidden = true;
+
+  answered = false;
+
+}
+
+function checkAnswer() {
+
+  if (answered) return;
+
+  const selected = document.querySelector('input[name="answer"]:checked');
+
+  if (!selected) {
+
+    document.getElementById('feedback').textContent =
+
+      'Pilih jawaban terlebih dahulu.';
+
+    return;
+
+  }
+
+  const question = questions[questionIndex];
+
+  const correct = Number(selected.value) === question.answer;
+
+  if (correct) score++;
+
+  document.getElementById('feedback').textContent =
+
+    (correct ? 'Benar! ' : 'Belum tepat. ') + question.explanation;
+
+  document.getElementById('checkBtn').hidden = true;
+
+  document.getElementById('nextBtn').hidden = false;
+
+  answered = true;
+
+}
+
+function nextQuestion() {
+
+  questionIndex++;
+
+  if (questionIndex >= questions.length) {
+
+    document.getElementById('question').textContent =
+
+      `Kuis selesai! Skor kamu ${score} dari ${questions.length}.`;
+
+    document.getElementById('options').innerHTML = '';
+
+    document.getElementById('feedback').textContent =
+
+      'Terus belajar dan praktikkan kebiasaan baik!';
+
+    document.getElementById('nextBtn').hidden = true;
+
+    const restart = document.createElement('button');
+
+    restart.className = 'btn';
+
+    restart.textContent = 'Ulangi Kuis';
+
+    restart.onclick = () => {
+
+      questionIndex = 0;
+
+      score = 0;
+
+      renderQuestion();
+
+      restart.remove();
+
+    };
+
+    document.getElementById('feedback').after(restart);
+
+    return;
+
+  }
+
+  renderQuestion();
+
+}
+
+renderQuestion();
+
+function saveReflection() {
+
+  const answer = document.getElementById('reflection').value.trim();
+
+  document.getElementById('reflectionResult').textContent =
+
+    answer
+
+      ? 'Jawaban berhasil dicatat untuk sesi ini.'
+
+      : 'Tuliskan refleksimu terlebih dahulu.';
+
+}
+
+const checkboxes = document.querySelectorAll('.taskCheck');
+
+checkboxes.forEach(box => {
+
+  box.addEventListener('change', updateProgress);
+
+});
+
+function updateProgress() {
+
+  const completed = [...checkboxes].filter(box => box.checked).length;
+
+  const percentage = completed / checkboxes.length * 100;
+
+  document.getElementById('progressBar').style.width =
+
+    percentage + '%';
+
+  document.getElementById('progressText').textContent =
+
+    `${completed} dari ${checkboxes.length} kegiatan selesai`;
+
+}
+
+function publishActivity() {
+
+  const name = document.getElementById('activityName').value.trim();
+
+  const story = document.getElementById('activityStory').value.trim();
+
+  const photo = document.getElementById('activityPhoto').files[0];
+
+  if (!name || !story) {
+
+    document.getElementById('publishResult').textContent =
+
+      'Isi nama kegiatan dan ceritamu terlebih dahulu.';
+
+    return;
+
+  }
+
+  const post = document.createElement('article');
+
+  post.className = 'post';
+
+  const title = document.createElement('h3');
+
+  title.textContent = name;
+
+  const description = document.createElement('p');
+
+  description.textContent = story;
+
+  post.append(title, description);
+
+  function addPost(imageURL) {
+
+    if (imageURL) {
+
+      const image = document.createElement('img');
+
+      image.src = imageURL;
+
+      image.alt = 'Foto kegiatan';
+
+      post.prepend(image);
+
+    }
+
+    document.getElementById('feed').prepend(post);
+
+    document.getElementById('publishResult').textContent =
+
+      'Catatan berhasil ditambahkan!';
+
+    document.getElementById('activityName').value = '';
+
+    document.getElementById('activityStory').value = '';
+
+    document.getElementById('activityPhoto').value = '';
+
+  }
+
+  if (photo) {
+
+    const reader = new FileReader();
+
+    reader.onload = () => addPost(reader.result);
+
+    reader.readAsDataURL(photo);
+
+  } else {
+
+    addPost(null);
+
+  }
+
+}
+
+</script>
+
+</body>
+
+</html>
